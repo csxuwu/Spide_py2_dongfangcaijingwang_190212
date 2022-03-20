@@ -1,0 +1,57 @@
+早读
+https://www.yuncaijing.com/news/id_12305516.html   1.18
+https://www.yuncaijing.com/news/id_12318900.html   1.23
+https://www.yuncaijing.com/news/id_12326077.html   1.27
+
+晚间新闻
+https://www.yuncaijing.com/news/id_12318073.html   1.23
+
+47
+
+东方财富网：
+	龙虎榜上榜股票每日成交明细
+		url根据日期变的	
+		http://data.eastmoney.com/stock/lhb.html 首页
+		http://data.eastmoney.com/stock/lhb,2019-01-24,002941.html		2019-01-24
+		http://data.eastmoney.com/stock/lhb,2019-01-23,002941.html		2019-01-23
+
+		区间查询：
+			请求报文：
+				设置区间
+				http://data.eastmoney.com/DataCenter_V3/stock2016/TradeDetail/pagesize=50,page=1,sortRule=-1,sortType=,startDate=2018-12-27,endDate=2019-01-27,gpfw=0,js=var%20data_tab_2.html?rt=25809955 HTTP/1.1
+
+				http://data.eastmoney.com/DataCenter_V3/stock2016/TradeDetail/pagesize=50,page=100,sortRule=-1,sortType=,startDate=2017-12-27,endDate=2018-01-27,gpfw=0,js=var%20data_tab_2.html?
+
+				http://data.eastmoney.com/DataCenter_V3/stock2016/TradeDetail/pagesize=50,page=2,sortRule=-1,sortType=,startDate=2018-12-27,endDate=2019-01-27,gpfw=0,js=var%20data_tab_2.html?rt=25809958 HTTP/1.1
+
+				当天到当天
+				http://data.eastmoney.com/DataCenter_V3/stock2016/TradeDetail/pagesize=200,page=1,sortRule=-1,sortType=,startDate=2019-01-27,endDate=2019-01-27,gpfw=0,js=var%20data_tab_1.html?rt=25809964 HTTP/1.1
+
+				查询当天的，不设置区间
+				http://data.eastmoney.com/DataCenter_V3/stock2016/TradeDetail/pagesize=200,page=1,sortRule=-1,sortType=,startDate=2019-01-25,endDate=2019-01-25,gpfw=0,js=var%20data_tab_1.html?rt=25809966 HTTP/1.1
+
+				近三天	
+				http://data.eastmoney.com/DataCenter_V3/stock2016/TradeDetail/pagesize=50,page=1,sortRule=-1,sortType=,startDate=2019-01-23,endDate=2019-01-25,gpfw=0,js=var%20data_tab_2.html?rt=25809970 HTTP/1.1
+
+				近5日
+					请求
+					http://data.eastmoney.com/DataCenter_V3/stock2016/TradeDetail/pagesize=50,page=1,sortRule=-1,sortType=,startDate=2019-01-21,endDate=2019-01-25,gpfw=0,js=var%20data_tab_2.html?rt=25809971 HTTP/1.1
+					响应
+					url=http://datainterface3.eastmoney.com//EM_DataCenter_V3/api/LHBGGDRTJ/GetLHBGGDRTJ?tkn=eastmoney&mkt=0&dateNum=&startDateTime=2019-01-21&endDateTime=2019-01-25&sortRule=1&sortColumn=&pageNum=1&pageSize=50&cfg=lhbggdrtj
+
+			区间选择html：
+	            <div class="date-input-wrap">
+				    <input type="text" class="date-input" id="search_date_start" readonly="readonly" value="2019-01-27" onclick="WdatePicker()" />
+	            	至
+	                <input type="text" class="date-input" id="search_date_end" readonly="readonly" value="2019-01-27" onclick="WdatePicker()" />
+
+				</div>
+		页码超过，而显示的内容
+			var data_tab_2={"success":true,"pages":0,"data":[],"url":"http://datainterface3.eastmoney.com//EM_DataCenter_V3/api/LHBGGDRTJ/GetLHBGGDRTJ?tkn=eastmoney&mkt=0&dateNum=&startDateTime=2018-12-27&endDateTime=2019-01-27&sortRule=1&sortColumn=&pageNum=100&pageSize=50&cfg=lhbggdrtj"}	
+
+			var data_tab_2={"success":true,"pages":0,"data":[],"url":"http://datainterface3.eastmoney.com//EM_DataCenter_V3/api/LHBGGDRTJ/GetLHBGGDRTJ?tkn=eastmoney&mkt=0&dateNum=&startDateTime=2017-12-27&endDateTime=2018-01-27&sortRule=1&sortColumn=&pageNum=100&pageSize=50&cfg=lhbggdrtj"}
+
+	营业部买卖统计
+		http://data.eastmoney.com/stock/lhb/yybggtj/002941.html
+		http://data.eastmoney.com/stock/lhb/yybggtj/002941.html
+
